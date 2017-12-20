@@ -69,7 +69,7 @@ public class MainActivity extends AppCompatActivity {
 
     private void onStartPress()
     {
-        ImageView iv = (ImageView) findViewById(R.id.image_view);
+        ImageView iv = (ImageView) findViewById(R.id.image_view_final);
         Mat m = new Mat();
         Utils.bitmapToMat(rgbImage, m);
         imageTest(m.getNativeObjAddr());
