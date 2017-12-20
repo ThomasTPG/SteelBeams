@@ -30,14 +30,7 @@ public class MainActivity extends AppCompatActivity {
         Mat m = new Mat();
         Bitmap rgbImage = BitmapFactory.decodeResource(getResources(), R.mipmap.ic_launcher);
         Utils.bitmapToMat(rgbImage, m);
-        if (!OpenCVLoader.initDebug())
-        {
-            s += "Failed";
-        }
-        else
-        {
-            s += "Success" + imageTest(m.getNativeObjAddr());
-        }
+        imageTest(m.getNativeObjAddr());
         Bitmap bmp = null;
         try {
             bmp = Bitmap.createBitmap(m.cols(), m.rows(), Bitmap.Config.ARGB_8888);

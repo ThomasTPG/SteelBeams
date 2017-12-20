@@ -21,7 +21,7 @@ Java_com_example_user_cmake_MainActivity_imageTest(JNIEnv *env, jobject, jlong a
 {
     cv::Mat* inputImage_p = (cv::Mat*)addrImage;
     cv::cvtColor(*inputImage_p, *inputImage_p, CV_BGR2GRAY);
-    std::string hello2 = "Hello from validate";
+    std::string hello2 = "Hello from imageTest";
     return env->NewStringUTF(hello2.c_str());
 }
 
